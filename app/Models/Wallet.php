@@ -14,6 +14,13 @@ class Wallet extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<string>
+     */
+    protected $fillable = ['user_id'];
+
+    /**
      * @return BelongsTo<User>
      */
     public function user(): BelongsTo
