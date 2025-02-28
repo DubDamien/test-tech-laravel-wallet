@@ -64,6 +64,46 @@
                                       required />
                         <x-input-error :messages="$errors->get('reason')" class="mt-2" />
                     </div>
+                    <div>
+                        <x-input-label for="recuring" :value="__('Recuring Transfer ')" />
+                        <x-text-input id="recuring"
+                                      class="block mt-1"
+                                      type="checkbox"
+                                      :value="old('recuring')"
+                                      name="recuring"
+                                      />
+                        <x-input-error :messages="$errors->get('recuring')" class="mt-2" />
+                    </div>
+                    <div>
+                        <x-input-label for="frequency" :value="__('Frequeency')" />
+                        <x-text-input id="frequency"
+                                      class="block mt-1 w-full"
+                                      type="number"
+                                      :value="old('frequency')"
+                                      name="frequency"
+                                      />
+                        <x-input-error :messages="$errors->get('frequency')" class="mt-2" />
+                    </div>
+                    <div>
+                        <x-input-label for="start_date" :value="__('Start Date')" />
+                        <x-text-input id="start_date"
+                                      class="block mt-1 w-full"
+                                      type="date"
+                                      :value="old('start_date')"
+                                      name="start_date"
+                                      />
+                        <x-input-error :messages="$errors->get('start_date')" class="mt-2" />
+                    </div>
+                    <div>
+                        <x-input-label for="end_date" :value="__('End Date')" />
+                        <x-text-input id="end_date"
+                                      class="block mt-1 w-full"
+                                      type="date"
+                                      :value="old('end_date')"
+                                      name="end_date"
+                                      />
+                        <x-input-error :messages="$errors->get('end_date')" class="mt-2" />
+                    </div>
 
                     <div class="flex justify-end mt-4">
                         <x-primary-button>

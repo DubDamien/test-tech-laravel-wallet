@@ -19,6 +19,10 @@ class SendMoneyController
             recipient: $recipient,
             amount: $request->input('amount'),
             reason: $request->input('reason'),
+            recuring: $request->input('recursive'),
+            start_date: $request->input('start_date'),
+            end_date: $request->input('end_date'),
+            frequency: $request->input('frequency')
         );
 
         return response()->noContent(201);
